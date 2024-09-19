@@ -20,7 +20,6 @@
   <ItemGroup>
     <Folder Include="src\Api\Controllers\" />
     <Folder Include="src\Config\" />
-    <Folder Include="src\Domain\Repositories\" />
     <Folder Include="src\Infrastructure\AbstractServices\" />
     <Folder Include="src\Infrastructure\Mappers\" />
     <Folder Include="src\Infrastructure\Services\" />
