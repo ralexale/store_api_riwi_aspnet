@@ -4,12 +4,12 @@
     {
         Task<IEnumerable<TResponse>> Get();
 
-        Task<TResponse> GetById(int id);
+        Task<TResponse?> GetById(int id);
 
         Task<TResponse> Create(TRequest request);
 
-        Task<TResponse> Update(int id ,TRequest request);
+        Task<TResponse?> Update(int id ,TRequest request);
 
-        Task<TResponse> Delete(int id);
+        Task<TResponse?> Delete(int id);
     }
 }
