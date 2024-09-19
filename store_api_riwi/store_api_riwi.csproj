@@ -19,8 +19,6 @@
 
   <ItemGroup>
     <Folder Include="src\Api\Controllers\" />
-    <Folder Include="src\Api\DTOs\Response\" />
-    <Folder Include="src\Api\DTOs\Request\" />
     <Folder Include="src\Api\Validators\" />
     <Folder Include="src\Config\" />
     <Folder Include="src\Domain\Repositories\" />
