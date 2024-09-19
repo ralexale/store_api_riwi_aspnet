@@ -1,0 +1,8 @@
+services:
+    mysql:
+        container_name: mysql_container
+        image: mysql
+        restart: always
+        environment:
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: testDB
