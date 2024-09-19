@@ -3,6 +3,8 @@ services:
         container_name: mysql_container
         image: mysql
         restart: always
+        ports:
+        - 3306:3306
         environment:
          MYSQL_ROOT_PASSWORD: root
          MYSQL_DATABASE: testDB

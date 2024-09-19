@@ -14,7 +14,7 @@ namespace store_api_riwi.src.Api.Validators.Request
             RuleFor(p => p.Description).Length(2, 100);
             RuleFor(p => p.Description).NotEmpty();
 
-            RuleFor(p => p.Price).Null();
+            RuleFor(p => p.Price).NotNull();
             RuleFor(p=> p.Price).GreaterThan(0);
         }
     }
