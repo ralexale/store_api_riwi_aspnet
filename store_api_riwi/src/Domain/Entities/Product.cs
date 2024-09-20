@@ -8,9 +8,9 @@ namespace store_api_riwi.src.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public double Price { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
+        public required double Price { get; set; }
 
         public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
