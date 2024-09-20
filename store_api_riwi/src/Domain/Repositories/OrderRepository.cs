@@ -17,9 +17,16 @@ namespace store_api_riwi.src.Domain.Repositories
             .Include(o => o.User)
             .Include(o => o.Product).ToListAsync();
 
-        public async Task<Order> GetById(int id) => await _context.Orders.FindAsync(id);
+        public async Task<Order> GetById(int id)
+        {
+            return await _context.Orders
+            .Include(o => o.User)
+            .Include(o => o.Product).FirstOrDefaultAsync(o => o.Id == id);
+        }
 
         public async Task Create(Order order) => await _context.Orders.AddAsync(order);
+
+
 
         public async Task Save() => await _context.SaveChangesAsync();
 

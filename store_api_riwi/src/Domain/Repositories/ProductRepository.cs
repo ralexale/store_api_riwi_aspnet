@@ -27,5 +27,7 @@ namespace store_api_riwi.src.Domain.Repositories
             _context.Products.Entry(product).State = EntityState.Modified;
         }
         public void Delete(Product product) => _context.Products.Remove(product);
+
+       
     }
 }

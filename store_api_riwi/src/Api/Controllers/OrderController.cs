@@ -67,7 +67,7 @@ namespace store_api_riwi.src.Api.Controllers
         }
 
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<OrderResponse>> Delete(int id)
         {
             var orderResponse = await _orderService.Delete(id);
