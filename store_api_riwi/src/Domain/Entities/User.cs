@@ -10,7 +10,7 @@ namespace store_api_riwi.src.Domain.Entities
         public int Id { get; set; }
         public required string Name { get; set; }
         public required string Lastname { get; set; }
-        public required string Emil { get; set; }
+        public required string Email { get; set; }
 
         public ICollection<Order> Orders { get; set; } = new List<Order>();
     }

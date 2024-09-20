@@ -3,7 +3,7 @@ using store_api_riwi.src.Domain.Entities;
 
 namespace store_api_riwi.src.Domain.Repositories
 {
-    public class OrderRepository: IRepository<Order>
+    public class OrderRepository : IRepository<Order>
     {
 
         private StoreContext _context;
@@ -13,7 +13,9 @@ namespace store_api_riwi.src.Domain.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Order>> Get() => await _context.Orders.ToListAsync();
+        public async Task<IEnumerable<Order>> Get() => await _context.Orders
+            .Include(o => o.User)
+            .Include(o => o.Product).ToListAsync();
 
         public async Task<Order> GetById(int id) => await _context.Orders.FindAsync(id);
 

@@ -25,7 +25,7 @@ namespace store_api_riwi.src.Infrastructure.Services
         {
             var users = await _repository.Get();
 
-            return users.Select(_mapper.Map<UserResponse>);
+            return users.Select(_mapper.Map<UserResponse>).ToList();
         }
 
         public async Task<UserResponse?> GetById(int id)

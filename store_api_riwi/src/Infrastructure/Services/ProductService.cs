@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using store_api_riwi.src.Api.DTOs.Request;
 using store_api_riwi.src.Api.DTOs.Response;
-using store_api_riwi.src.Domain.Entities;
 using store_api_riwi.src.Domain;
+using store_api_riwi.src.Domain.Entities;
 using store_api_riwi.src.Domain.Repositories;
 using store_api_riwi.src.Infrastructure.AbstractServices;
 
